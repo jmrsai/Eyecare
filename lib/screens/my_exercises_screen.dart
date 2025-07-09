@@ -111,7 +111,8 @@ class _MyExercisesScreenState extends State<MyExercisesScreen> {
                     value: routine['progress'],
                     minHeight: 8,
                     borderRadius: BorderRadius.circular(4),
-                    backgroundColor: Theme.of(context).colorScheme.surfaceVariant,
+                    // Updated: Use surfaceContainerHighest instead of deprecated surfaceVariant
+                    backgroundColor: Theme.of(context).colorScheme.surfaceContainerHighest,
                     valueColor: AlwaysStoppedAnimation<Color>(Theme.of(context).colorScheme.tertiary),
                   ),
                   const SizedBox(height: 4),

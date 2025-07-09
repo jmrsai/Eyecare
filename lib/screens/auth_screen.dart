@@ -30,6 +30,9 @@ class _AuthScreenState extends State<AuthScreen> {
         _isLoading = false;
       });
 
+      // Check if the widget is still mounted before navigating
+      if (!mounted) return;
+
       // Navigate to role selection screen on successful authentication
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(builder: (context) => const RoleSelectionScreen()),

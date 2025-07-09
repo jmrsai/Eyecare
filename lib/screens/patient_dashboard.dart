@@ -1,6 +1,5 @@
 // lib/screens/patient_dashboard.dart
 import 'package:flutter/material.dart';
-import 'package:healthcare/screens/my_exercises_screen.dart';
 import 'package:healthcare/screens/games_library_screen.dart';
 import 'package:healthcare/screens/progress_history_screen.dart';
 import 'package:healthcare/screens/profile_settings_screen.dart';
@@ -60,6 +59,7 @@ class _PatientDashboardState extends State<PatientDashboard> {
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Theme.of(context).colorScheme.primary,
+        // Updated: Use onSurfaceVariant for unselected item color (more Material 3 compliant)
         unselectedItemColor: Theme.of(context).colorScheme.onSurfaceVariant,
         onTap: _onItemTapped,
         type: BottomNavigationBarType.fixed, // Ensures all labels are shown
@@ -104,7 +104,8 @@ class _PatientHomeContent extends StatelessWidget {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(16.0),
               ),
-              color: Theme.of(context).colorScheme.surfaceVariant,
+              // Updated: Use surfaceContainerHighest instead of deprecated surfaceVariant
+              color: Theme.of(context).colorScheme.surfaceContainerHighest,
               child: Padding(
                 padding: const EdgeInsets.all(24.0),
                 child: Column(
@@ -113,6 +114,7 @@ class _PatientHomeContent extends StatelessWidget {
                       'Your Daily Exercise',
                       style: Theme.of(context).textTheme.titleLarge?.copyWith(
                         fontWeight: FontWeight.bold,
+                        // Updated: Use onSurfaceVariant for text color
                         color: Theme.of(context).colorScheme.onSurfaceVariant,
                       ),
                     ),
@@ -120,6 +122,7 @@ class _PatientHomeContent extends StatelessWidget {
                     Text(
                       'Complete "Focus Shifter" today for 10 minutes.',
                       style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                        // Updated: Use onSurfaceVariant for text color
                         color: Theme.of(context).colorScheme.onSurfaceVariant.withOpacity(0.9),
                       ),
                       textAlign: TextAlign.center,
@@ -161,7 +164,8 @@ class _PatientHomeContent extends StatelessWidget {
               value: 0.75, // Placeholder progress
               minHeight: 10,
               borderRadius: BorderRadius.circular(10),
-              backgroundColor: Theme.of(context).colorScheme.surfaceVariant,
+              // Updated: Use surfaceContainerHighest instead of deprecated surfaceVariant
+              backgroundColor: Theme.of(context).colorScheme.surfaceContainerHighest,
               valueColor: AlwaysStoppedAnimation<Color>(Theme.of(context).colorScheme.tertiary),
             ),
             const SizedBox(height: 8),
@@ -170,6 +174,7 @@ class _PatientHomeContent extends StatelessWidget {
               child: Text(
                 '75% Completed',
                 style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                  // Updated: Use onSurfaceVariant for text color
                   color: Theme.of(context).colorScheme.onSurfaceVariant,
                 ),
               ),

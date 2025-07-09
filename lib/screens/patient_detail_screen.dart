@@ -71,8 +71,8 @@ class PatientDetailScreen extends StatelessWidget {
                       DecoratedBox(
                         decoration: BoxDecoration(
                           gradient: LinearGradient(
-                            begin: Alignment(0.0, -1.0),
-                            end: Alignment(0.0, -0.4),
+                            begin: Alignment.topCenter, // Use Alignment.topCenter instead of Alignment(0.0, -1.0)
+                            end: Alignment.bottomCenter, // Use Alignment.bottomCenter instead of Alignment(0.0, -0.4)
                             colors: <Color>[
                               Theme.of(context).colorScheme.primary.withOpacity(0.6),
                               Theme.of(context).colorScheme.primary.withOpacity(0.0),
@@ -202,8 +202,7 @@ class PatientDetailScreen extends StatelessWidget {
           _buildInfoCard(
             context,
             title: 'Appointment History',
-            children: [
-              // Dummy appointment history
+            children: [ // Removed const from here
               _buildInfoRow(context, '2024-06-15:', 'Routine check-up'),
               _buildInfoRow(context, '2024-03-10:', 'Follow-up on myopia progression'),
             ],
@@ -464,7 +463,7 @@ class PatientDetailScreen extends StatelessWidget {
   }
 
   // Helper widget to build consistent info rows
-  Widget _buildInfoRow(BuildContext context, String label, String value) {
+  static Widget _buildInfoRow(BuildContext context, String label, String value) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 4.0),
       child: Row(

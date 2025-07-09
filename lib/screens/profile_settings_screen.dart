@@ -120,7 +120,7 @@ class _ProfileSettingsScreenState extends State<ProfileSettingsScreen> {
                     SnackBar(content: Text('Theme set to $_selectedTheme')),
                   );
                 },
-                items: <String>['System Default', 'Light', 'Dark']
+                items: const <String>['System Default', 'Light', 'Dark'] // Added const
                     .map<DropdownMenuItem<String>>((String value) {
                   return DropdownMenuItem<String>(
                     value: value,
@@ -143,7 +143,7 @@ class _ProfileSettingsScreenState extends State<ProfileSettingsScreen> {
                     SnackBar(content: Text('Language set to $_selectedLanguage')),
                   );
                 },
-                items: <String>['English', 'Spanish', 'French'] // Example languages
+                items: const <String>['English', 'Spanish', 'French'] // Example languages, Added const
                     .map<DropdownMenuItem<String>>((String value) {
                   return DropdownMenuItem<String>(
                     value: value,
@@ -188,7 +188,7 @@ class _ProfileSettingsScreenState extends State<ProfileSettingsScreen> {
                   applicationName: 'Visionary Care',
                   applicationVersion: '1.0.0',
                   applicationLegalese: '© 2024 JMR Healthcare. All rights reserved.',
-                  children: [
+                  children: const [ // Added const
                     Text('A Flutter app designed to help professionals manage patient eye care and provide engaging eye health exercises.'),
                   ],
                 );

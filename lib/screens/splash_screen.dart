@@ -1,6 +1,5 @@
 // lib/screens/splash_screen.dart
 import 'package:flutter/material.dart';
-import 'package:healthcare/screens/auth_screen.dart'; // Import the authentication screen
 import 'package:healthcare/screens/onboarding_screen.dart'; // Import onboarding screen
 
 class SplashScreen extends StatefulWidget {

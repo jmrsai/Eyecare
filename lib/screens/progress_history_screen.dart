@@ -262,7 +262,7 @@ class _ProgressHistoryScreenState extends State<ProgressHistoryScreen> {
                   elevation: 1.0,
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
                   child: ListTile(
-                    leading: Icon(Icons.gamepad, color: Theme.of(context).colorScheme.secondary),
+                    leading: const Icon(Icons.gamepad), // Added const
                     title: Text(
                       '${activity['game']}',
                       style: Theme.of(context).textTheme.titleMedium,

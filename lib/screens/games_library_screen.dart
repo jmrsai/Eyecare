@@ -1,4 +1,4 @@
-// lib/screens/games_library_screen.dart
+// lib/screens/games_library_screen.dart (Updated)
 import 'package:flutter/material.dart';
 import 'package:healthcare/screens/focus_shifter_game.dart'; // Import the example game
 
@@ -187,11 +187,13 @@ class GameCard extends StatelessWidget {
           children: [
             Expanded(
               child: Container(
-                color: Theme.of(context).colorScheme.surfaceVariant, // Placeholder for image
+                // Updated: Use surfaceContainerHighest instead of deprecated surfaceVariant
+                color: Theme.of(context).colorScheme.surfaceContainerHighest, // Placeholder for image
                 child: Center(
                   child: Icon(
                     Icons.gamepad, // Generic game icon
                     size: 60,
+                    // Updated: Use onSurfaceVariant for icon color
                     color: Theme.of(context).colorScheme.onSurfaceVariant.withOpacity(0.6),
                   ),
                 ),
