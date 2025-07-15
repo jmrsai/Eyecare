@@ -15,7 +15,7 @@ android {
 
     // The compileSdk version should be the latest stable Android API level.
     // As of recent Flutter versions, this is often 34 or higher.
-    compileSdk = 34 // Ensure this matches your Flutter setup's recommendation
+    compileSdk = 35 // Ensure this matches your Flutter setup's recommendation
 
     sourceSets {
         getByName("main").java.srcDirs("src/main/kotlin")
@@ -27,7 +27,7 @@ android {
         // TODO: Specify your own unique Application ID (https://developer.android.com/tools/publishing/app-signing#secure-by-default)
         applicationId = "com.jmr.healthcare"
         minSdk = 21 // Minimum Android SDK version supported by your app
-        targetSdk = 34 // Target Android SDK version
+        targetSdk = 35 // Target Android SDK version
         versionCode = flutter.versionCode ?: 1
         versionName = flutter.versionName ?: "1.0.0"
 
