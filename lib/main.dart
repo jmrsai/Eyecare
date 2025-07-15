@@ -37,26 +37,19 @@ class MyApp extends StatelessWidget {
           foregroundColor: lightColorScheme.onPrimary,
           elevation: 4.0, // Add a subtle shadow
         ),
-        // Corrected: Use ButtonThemeData for buttonTheme
-        buttonTheme: const ButtonThemeData(
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(12.0)), // Rounded corners for buttons
-          ),
-        ),
-        // Corrected: Use CardThemeData for cardTheme
-        cardTheme: CardThemeData(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12.0), // Rounded corners for cards
           ),
           elevation: 2.0,
         ),
+
+
+// Correct:
+        cardTheme: CardThemeData(...),
         inputDecorationTheme: InputDecorationTheme(
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(12.0), // Rounded corners for input fields
           ),
           filled: true,
-          // Updated: Use surfaceContainerHighest instead of deprecated surfaceVariant
-          fillColor: lightColorScheme.surfaceContainerHighest.withOpacity(0.2),
         ),
       ),
       darkTheme: ThemeData(
@@ -68,26 +61,29 @@ class MyApp extends StatelessWidget {
           foregroundColor: darkColorScheme.onPrimary,
           elevation: 4.0,
         ),
-        // Corrected: Use ButtonThemeData for buttonTheme
-        buttonTheme: const ButtonThemeData(
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(12.0)),
           ),
         ),
-        // Corrected: Use CardThemeData for cardTheme
-        cardTheme: CardThemeData(
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12.0),
           ),
           elevation: 2.0,
+        ),
+        darkTheme: ThemeData(
+          // ...
+          cardTheme: CardThemeData( // Corrected: Used CardThemeData
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12.0),
+            ),
+            elevation: 2.0,
+          ),
+          // ...
         ),
         inputDecorationTheme: InputDecorationTheme(
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(12.0),
           ),
           filled: true,
-          // Updated: Use surfaceContainerHighest instead of deprecated surfaceVariant
-          fillColor: darkColorScheme.surfaceContainerHighest.withOpacity(0.2),
         ),
       ),
       home: const SplashScreen(), // Set SplashScreen as the initial route
